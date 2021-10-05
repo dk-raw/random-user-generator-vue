@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
 
 body {
   font-family: "Nunito", sans-serif;
@@ -6,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 13%);
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 
 .bg-dark {
@@ -19,8 +20,34 @@ body {
   background-color: hsl(0, 0%, 19%);
 }
 
+.header p.lead {
+  color: hsl(0, 0%, 60%);
+}
+
 .center {
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+.table-dark {
+  color: hsl(0, 0%, 100%);
+}
+
+.table-dark th,
+.table-dark td {
+  background-color: hsl(0, 0%, 13%) !important;
+}
+
+.table th {
+  font-weight: 600;
+}
+
+.bg-success {
+  transition: all 0.2s ease-in-out;
+}
+
+.bg-success:hover,
+.bg-success:focus {
+  background-color: hsl(152, 69%, 25%) !important
 }

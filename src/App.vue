@@ -2,38 +2,39 @@
   <Navbar brand="Random User Generator" />
   <section class="header">
     <h1 class="text-center">Random User Generator</h1>
-    <p class="text-center text-muted">generate a random user!</p>
+    <p class="lead text-center">generate a random person!</p>
+    <button class="btn btn-success btn-lg center my-4" @click="generateUser">
+      <i class="bi bi-arrow-repeat"></i> Generate
+    </button>
   </section>
   <div class="container">
-    <button
-      class="btn btn-outline-success btn-lg center my-4"
-      @click="generateUser"
-    >
-      Generate
-    </button>
     <img
       :src="thumbnailUrl"
       :alt="fname + ' ' + lname"
-      class="img-fluid rounded border border-white my-3"
+      class="img-fluid rounded border border-white my-3 center"
     />
-    <p class="text-break">Name: {{ fname }} {{ lname }}</p>
-    <p class="text-break">Gender: {{ gender }}</p>
-    <p class="text-break">Location: {{ city }}, {{ country }}</p>
-    <p class="text-break">Email: {{ email }}</p>
-    <p class="text-break">Phone: {{ phone }}</p>
-    <p class="text-break">Age: {{ age }}</p>
-    <p class="text-break">Social Username: {{ username }}</p>
+    <Table
+      :name="fname + ' ' + lname"
+      :email="email"
+      :phone="phone"
+      :gender="gender"
+      :age="age"
+      :username="username"
+      :location="city + ', ' + country"
+    />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
+import Table from "./components/Table.vue";
 import defaultPicture from "./assets/default-picture.jpg";
 
 export default {
   name: "App",
   components: {
     Navbar,
+    Table,
   },
   data() {
     return {
